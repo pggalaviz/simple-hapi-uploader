@@ -1,0 +1,19 @@
+{
+  "name": "simple-hapi-uploader",
+  "version": "1.0.0",
+  "description": "A simple file uploader with hapi.js",
+  "main": "index.js",
+  "author": "PGGalaviz <pggalaviz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "async": "^2.3.0",
+    "boom": "^4.3.1",
+    "del": "^2.2.2",
+    "hapi": "^16.1.1",
+    "lokijs": "^1.4.3",
+    "uuid": "^3.0.1"
+  }
+}
