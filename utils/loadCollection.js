@@ -1,7 +1,5 @@
 'use strict';
 
-const Loki = require('lokijs');
-
 const loadCollection = function(colName, Loki) {
     return new Promise(resolve => {
         Loki.loadDatabase({}, () => {
