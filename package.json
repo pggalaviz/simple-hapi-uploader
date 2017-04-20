@@ -2,12 +2,12 @@
   "name": "simple-hapi-uploader",
   "version": "1.0.0",
   "description": "A simple file uploader with hapi.js",
-  "main": "index.js",
-  "author": "PGGalaviz <pggalaviz@gmail.com>",
-  "license": "MIT",
   "engines": {
     "node": "7.9.0"
   },
+  "main": "index.js",
+  "author": "PGGalaviz <pggalaviz@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pggalaviz/simple-hapi-uploader"
