@@ -20,7 +20,7 @@ if (!fs.existsSync(Config.db.path)) {
 }
 
 const _PORT = process.env.PORT || Config.server.port || 3000;
-const _HOST = process.env.HOST || Config.server.host || '0.0.0.0';
+const _HOST = process.env.HOST || Config.server.host || 'localhost';
 
 internals.main = function () {
     
