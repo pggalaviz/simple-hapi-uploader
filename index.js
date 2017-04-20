@@ -24,8 +24,8 @@ internals.main = function () {
     // Instantiate hapi.js server
     const server = new Hapi.Server();
     server.connection({
-        port: Config.server.port || 3000,
-        host: Config.server.host || 'localhost',
+        port: process.env.PORT || Config.server.port || 3000,
+        host: process.env.HOST || Config.server.host || 'localhost',
         routes: { cors: true }
     });
     // Save DB object to app instance for future calls
