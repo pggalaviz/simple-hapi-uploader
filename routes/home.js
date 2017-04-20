@@ -4,7 +4,7 @@ const r = {
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-        reply('Simple Hapi Uploader');
+        reply('Simple Hapi Uploader - Visit: https://github.com/pggalaviz/simple-hapi-uploader');
     }
 };
 
