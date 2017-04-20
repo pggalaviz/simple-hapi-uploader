@@ -25,7 +25,6 @@ internals.main = function () {
     const server = new Hapi.Server();
     server.connection({
         port: process.env.PORT || Config.server.port || 3000,
-        host: 'localhost', 
         routes: { cors: true }
     });
     // Save DB object to app instance for future calls
