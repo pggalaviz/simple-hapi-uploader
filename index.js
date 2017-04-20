@@ -29,7 +29,11 @@ internals.main = function () {
     server.connection({
         host: _HOST, 
         port: _PORT, 
-        routes: { cors: true }
+        routes: {
+            cors: {
+                origin: ['*'],
+            }
+        }
     });
     // Save DB object to app instance for future calls
     server.app.db = db;
