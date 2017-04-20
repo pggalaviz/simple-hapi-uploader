@@ -19,13 +19,16 @@ if (!fs.existsSync(Config.db.path)) {
     fs.mkdirSync(Config.db.path);
 }
 
+const _PORT = process.env.PORT || Config.server.port || 3000;
+const _HOST = process.env.HOST || Config.server.host || '0.0.0.0';
+
 internals.main = function () {
     
     // Instantiate hapi.js server
     const server = new Hapi.Server();
     server.connection({
-        host: process.env.HOST || Config.server.host || 'localhost',
-        port: process.env.PORT || Config.server.port || 3000,
+        host: _HOST, 
+        port: _PORT, 
         routes: { cors: true }
     });
     // Save DB object to app instance for future calls
