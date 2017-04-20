@@ -24,6 +24,7 @@ internals.main = function () {
     // Instantiate hapi.js server
     const server = new Hapi.Server();
     server.connection({
+        host: process.env.HOST || Config.server.host || 'localhost',
         port: process.env.PORT || Config.server.port || 3000,
         routes: { cors: true }
     });
