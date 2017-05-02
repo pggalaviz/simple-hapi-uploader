@@ -9,6 +9,7 @@ const r = {
     path: '/reset',
     handler: async function(request, reply) {
         try {
+            // Delete all files and DB
             await Reset(Config.db.path);
             reply({
                 statusCode: 200,

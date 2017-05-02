@@ -19,9 +19,9 @@ const r = {
                 reply(Boom.notFound());
                 return;
             }
-            
+            // Return file as a stream 
             reply(fs.createReadStream(path.join(Config.db.path, result.filename)))
-                .header('content-type', result.mimetype); // Important
+                .header('content-type', result.mimetype); // Important!!!
         } catch (err) {
             reply(Boom.badRequest(err.message, err));
         }

@@ -12,7 +12,7 @@ const r = {
         payload: {
             output: 'stream',
             parse: true,
-            allow: 'multipart/form-data' // Important
+            allow: 'multipart/form-data',
         },
         handler: async function (request, reply) {
             try {
@@ -20,7 +20,7 @@ const r = {
                 const data = request.payload;
                 const file = data['file'];
                 const fileOptions = {
-                    dest: `${Config.db.path}/`
+                    dest: `${Config.db.path}/`,
                 };
                 // Upload file
                 const fileDetails = await uploader(file, fileOptions);
@@ -35,12 +35,12 @@ const r = {
                     originalName: result.originalname,
                     size: result.size,
                 });
-            
+
             } catch (err) {
                 reply(Boom.badRequest(err.message, err));
-            }
-        }
-    }
+            };
+        },
+    },
 };
 
 exports.routes = server => server.route(r); 

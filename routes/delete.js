@@ -21,7 +21,7 @@ const r = {
                 return;
             }
 
-            // Delete file
+            // Delete file from disk
             const _path = `${Config.db.path}/${file.filename}`;
             fs.unlinkSync(_path);
 

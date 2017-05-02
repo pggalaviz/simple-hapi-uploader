@@ -1,3 +1,4 @@
+// Simple configuration, host: '0.0.0.0' works for heroku deployments
 'use strict';
 
 module.exports = {

@@ -14,11 +14,11 @@ const uploader = function(file, options) {
 };
 
 const _fileHandler = function(file, options) {
-    const originalname = file.hapi.filename;
-    const filename = `${uuid.v1()}.${_extension(originalname)}`;
-    const path = `${options.dest}${filename}`;
+    const originalname = file.hapi.filename; // Get file original name
+    const filename = `${uuid.v1()}.${_extension(originalname)}`; // Create a unique file name
+    const path = `${options.dest}${filename}`; // Set Path
 
-    // Check if just images can be uploaded, otherwise write file.
+    // Check if just images can be uploaded (from configuration), otherwise write file.
     if (Config.db.imagesOnly && _imageFilter(originalname)) {
         throw new Error('This type of file is invalid, try with an image.'); 
         return;
@@ -58,8 +58,8 @@ const _imageFilter = function (fileName) {
 // Get file extension.
 const _extension = function(fileName) {
     const arr = fileName.split('.');
-    const item = arr.length - 1;
-    return arr[item];
+    const last = arr.length - 1;
+    return arr[last];
 }
 
 module.exports = uploader;

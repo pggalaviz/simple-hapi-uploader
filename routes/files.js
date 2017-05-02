@@ -11,6 +11,7 @@ const r = {
         try {
             const db = request.server.app.db; 
             const col = await loadCollection(Config.db.collection, db);
+            // Return all files
             reply(col.data)
         } catch (err) {
             reply(Boom.badRequest(err.message, err));
