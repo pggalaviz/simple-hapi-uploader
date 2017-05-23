@@ -12,4 +12,4 @@ A working demo can be found here:
 [simple-hapi-uploader.herokuapp.com](https://simple-hapi-uploader.herokuapp.com/)
 
 You can upload your files with **Postman** app or by creating a frontend that interacts with the
-above API.
+above API. A current working frontend made with **Vue** can be found here: [github.com/pggalaviz/simple-vue-uploader](https://github.com/pggalaviz/simple-vue-uploader)
